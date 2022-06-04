@@ -13,14 +13,9 @@ for (i = 0; i < SQUARE_NUMBER; i++) {
     const square = document.createElement('div');
     square.classList.add('square');
 
-    square.addEventListener('swipe', () => removeColor(square));
-    square.addEventListener('touchmove', () => {
-        removeColor(square);
-        TouchMove(e)
-    });
     square.addEventListener('mouseover', () => setColor(square));
     square.addEventListener('mouseleave', () => removeColor(square));
-    
+
     board.append(square);
 }
 
@@ -38,11 +33,4 @@ function removeColor(el) {
 function getRandomColor() {
     const index = Math.floor(Math.random() * coolors.length);
     return coolors[index]
-}
-
-function TouchMove(e)
-{
-    //Получаем новую позицию
-    touchPosition = { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY };
-    Draw(touchPosition.x, touchPosition.y, 2); //Рисуем точку текущей позиции
 }
