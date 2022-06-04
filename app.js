@@ -14,7 +14,10 @@ for (i = 0; i < SQUARE_NUMBER; i++) {
     square.classList.add('square');
 
     square.addEventListener('touchstart', () => removeColor(square));
-    square.addEventListener('touchmove', () => removeColor(square), TouchMove(e));
+    square.addEventListener('touchmove', () => {
+        removeColor(square);
+        TouchMove(e)
+    });
     square.addEventListener('mouseover', () => setColor(square));
     square.addEventListener('mouseleave', () => removeColor(square));
 
