@@ -13,9 +13,10 @@ for (i = 0; i < SQUARE_NUMBER; i++) {
     const square = document.createElement('div');
     square.classList.add('square');
 
+    square.addEventListener('touchstart', () => removeColor(square));
+    square.addEventListener('touchmove', () => removeColor(square));
     square.addEventListener('mouseover', () => setColor(square));
     square.addEventListener('mouseleave', () => removeColor(square));
-    square.addEventListener('touchmove', () => removeColor(square));
 
     board.append(square);
 }
