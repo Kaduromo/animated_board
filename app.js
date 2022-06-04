@@ -14,6 +14,9 @@ for (i = 0; i < SQUARE_NUMBER; i++) {
     square.classList.add('square');
 
     square.addEventListener('mouseover', () => setColor(square));
+    square.addEventListener('mousemove', () => setColor(square));
+    square.addEventListener('pointermove', () => setColor(square));
+    square.addEventListener('onpointermove', () => setColor(square));
     square.addEventListener('mouseleave', () => removeColor(square));
 
     board.append(square);
