@@ -6,7 +6,7 @@ if(document.documentElement.clientWidth > 500) {
     SQUARE_NUMBER = 546;
 
 } else if (document.documentElement.clientWidth < 500) {
-    SQUARE_NUMBER = 20;
+    SQUARE_NUMBER = 225;
 }
 
 for (i = 0; i < SQUARE_NUMBER; i++) {
