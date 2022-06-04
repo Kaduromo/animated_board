@@ -13,7 +13,7 @@ for (i = 0; i < SQUARE_NUMBER; i++) {
     const square = document.createElement('div');
     square.classList.add('square');
 
-    square.addEventListener('touchstart', () => removeColor(square));
+    square.addEventListener('swipe', () => removeColor(square));
     square.addEventListener('touchmove', () => {
         removeColor(square);
         TouchMove(e)
