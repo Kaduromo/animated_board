@@ -20,7 +20,7 @@ for (i = 0; i < SQUARE_NUMBER; i++) {
     });
     square.addEventListener('mouseover', () => setColor(square));
     square.addEventListener('mouseleave', () => removeColor(square));
-
+    square.OnTouchListener('touchmove', () => setColor(square));
     board.append(square);
 }
 
